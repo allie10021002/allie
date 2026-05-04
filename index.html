@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白沙屯媽祖繞境</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .Endorsement {
+            position: absolute;
+            /* position: relative; */
+            z-index: 1200;
+        }
+
+        .Endorsement img {
+            width: 100%;
+        }
+
+        #before {
+            width: 300px;
+            margin-top: 163px;
+        }
+
+        #after {
+            width: 300px;
+            height: 300px;
+        }
+
+        #stick {
+            width: 20px;
+            transform: translate(140px, 60px) rotate(3deg);
+            transition-duration: 3s;
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            transition-timing
+        }
+
+        #stick:hover {
+            transform: translate(140px, 0px) rotate(15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>z-index:1500</nav>
+    <div id="after" class="Endorsement"><img src="Endorsement/Endorsement_after.png"></div>
+    <div id="stick" class="Endorsement"><img src="Endorsement/stick.png"></div>
+    <div id="before" class="Endorsement"><img src="Endorsement/Endorsement_before.png"></div>
+         
+       
+    <script src="myjs.js"></script>
+    <div id="nav_bar"></div>
+    <header class="hero">
+        <style>
+            .btn_1 {
+                display: inline-block;
+                background: #BFAE40;
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 12px 35px;
+                margin: 10px;
+                border-radius: 50px;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in;
+                transform-origin: center;
+            }
+
+            .btn_1.hover {
+                transform: scale(1.2);
+                transform: rotate(360deg);
+            }
+        </style>
+        <div class="container">
+            <h1>白沙屯三尊媽祖</h1>
+            <h11>
+                <p>2026年一起乘粉紅超跑往北港徒步!</p>
+            </h11><br>
+            <a href="courses.html" class="btn_1">查看行程</a>
+        </div>
+    </header>
+
+</body>
+
+</html>
