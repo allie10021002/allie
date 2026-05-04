@@ -1,0 +1,134 @@
+/* ==========================================
+   跑班網站全域樣式 - 最終整合版
+   ========================================== */
+
+:root {
+    --primary-color: #ffc107;
+    --dark-color: #f30909;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body { 
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1000px;
+    margin:0px auto;
+    padding: 0 20px;
+}
+
+/* 導航欄 */
+nav {
+    background: rgba(151, 3, 3, 0.95);
+    backdrop-filter: blur(10px);
+    color: #f1b707;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    box-shadow: 0 2px 10px rgba(82, 67, 67, 0.1);
+}
+
+nav .container {    
+    display: flex;
+    justify-content: space-between;
+    align-items: var(--dark-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #caca0a;
+    text-decoration: floralwhite;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+/* 新增：當前頁面的發亮效果 */
+nav ul li a.active {
+    color: var(--primary-color); /* 變成活力黃 */
+    border-bottom: 10px solid var(--primary-color); /* 下方加一條線 */
+    font-weight: bold;
+}
+
+nav ul li a:hover { color: var(--primary-color); }
+
+/* 英雄區 */
+.hero {
+    z-index: 1200;
+    background: linear-gradient(rgba(228, 179, 179, 0.5), rgba(247, 232, 232, 0.7)), 
+                url('https://shoplineimg.com/5efc20a1905eb10026d50247/69c64a7e71cc6e7bc979695a/original.webp?source_format=png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* color: #a78907; */
+}
+
+.hero h1 {color: #977c05; font-size: 4.0rem; margin-bottom: 0.5rem; }
+.hero h11 {color: #683c02; font-size: 2.0rem; margin-bottom: 0.5rem; }
+/* 通用設定 */
+section { padding: 60px 0; }
+h2 { font-size: 2rem; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 4px; background: var(--primary-color); }
+
+/* 卡片與表格 */
+.row { display: flex; flex-wrap: wrap; gap: 30px; }
+.col { flex: 1; min-width: 280px; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--primary-color); }
+
+table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+table th { background: var(--dark-color); color: #fff; padding: 15px; }
+table td { padding: 15px; border-bottom: 1px solid #eee; text-align: center; }
+
+.btn { display: inline-block; padding: 12px 35px; background: var(--primary-color); color: var(--dark-color); text-decoration: none; border-radius: 50px; font-weight: bold; transition: var(--transition); border: none; cursor: pointer; }
+
+/* 手機版適配區 */
+@media (max-width: 768px) {
+    nav .container { padding: 0 10px; }
+    nav ul li a { padding: 8px 4px; font-size: 0.82rem; letter-spacing: -0.5px; }
+    .logo { font-size: 1.1rem; }
+    
+    section { padding: 30px 15px; }
+    .hero h1 { font-size: 2.2rem; }
+    
+.btn_1{
+    display: inline-block;
+    background: #eee;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 35px;
+    margin: 10px;
+    border-radius: 50px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transform-origin: center;    
+}
+.btn_1.hover{
+    transform: scale(1.2);
+    transform: rotate(360deg);
+}
